@@ -1,21 +1,27 @@
-const transactions = [
-    { id: 1, amount: 1500, isFraud: true },
-    { id: 2, amount: 200, isFraud: false },
-    { id: 3, amount: 5000, isFraud: true }
-];
+// dashboard.js
 
-function renderDashboard(transactions) {
-    const container = document.getElementById("dashboard");
-    transactions.forEach(txn => {
-        const txnElement = document.createElement("div");
-        txnElement.innerHTML = `
-            <p>Transaction ID: ${txn.id}</p>
-            <p>Amount: ${txn.amount}</p>
-            <p>Status: ${txn.isFraud ? 'Fraudulent' : 'Legitimate'}</p>
-        `;
-        txnElement.style.color = txn.isFraud ? 'red' : 'green';
-        container.appendChild(txnElement);
-    });
+// Function to display fraud status in the dashboard
+function displayFraudStatus(transaction) {
+    let fraudStatus = transaction.fraudStatus;
+    let statusElement = document.getElementById("fraudStatus");
+    
+    // Highlight fraudulent transactions
+    if (fraudStatus === "Fraudulent") {
+        statusElement.style.color = "red";
+    } else {
+        statusElement.style.color = "green";
+    }
+
+    statusElement.textContent = "Fraud Status: " + fraudStatus;
 }
 
-renderDashboard(transactions);
+// Example transaction object
+let transaction = {
+    id: 12345,
+    amount: 12000,
+    location: "Suspicious Country",
+    fraudStatus: "Fraudulent"
+};
+
+// Display the fraud status
+displayFraudStatus(transaction);
