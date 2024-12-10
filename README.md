@@ -4,6 +4,7 @@
 
 The **Fraud Detection Platform** is a robust and scalable system designed to detect fraudulent transactions in real-time. This platform integrates multiple programming languages and advanced machine learning techniques to ensure high accuracy and quick responses to potential fraud.
 Key components include:
+
 - **Python** for machine learning and data preprocessing.
 - **SQL** for aggregating and preparing transaction data.
 - **Java** for real-time fraud detection services.
@@ -74,6 +75,7 @@ Ensure your GitHub repository contains the `ci-cd.yml` workflow file under `.git
 ### 1. **Python: Core Machine Learning Pipeline**
 
 The Python component implements a **Random Forest Classifier** model that detects fraudulent transactions based on historical data. The pipeline includes:
+
 - **Data Preprocessing**: Standardization of features and one-hot encoding of categorical variables.
 - **Balancing the Dataset**: Using **SMOTE** (Synthetic Minority Over-sampling Technique) to handle imbalanced data.
 - **Model Training**: A **Random Forest Classifier** is trained on the preprocessed and balanced data.
@@ -83,18 +85,21 @@ The Python component implements a **Random Forest Classifier** model that detect
 ### 2. **SQL: Data Aggregation and Indexing**
 
 SQL is used to prepare the transaction data for analysis:
-- **Data Aggregation**: Aggregating key metrics such as the number of transactions, the total fraud count, average transaction amount, etc., by **customer_id**.
-- **Index Creation**: Creating indexes on critical columns (like **customer_id**) to speed up query performance.
+
+- **Data Aggregation**: Aggregating key metrics such as the number of transactions, the total fraud count, average transaction amount, etc., by **customer\_id**.
+- **Index Creation**: Creating indexes on critical columns (like **customer\_id**) to speed up query performance.
 
 ### 3. **Java: Real-Time Fraud Detection Service**
 
 The Java service performs **real-time fraud detection** based on predefined rules:
+
 - It processes transaction data, checking criteria like **transaction amount** and **location**.
 - It returns a **fraudulent** or **legitimate** status based on these rules.
 
 ### 4. **JavaScript: Fraud Monitoring Dashboard**
 
 The JavaScript dashboard provides a user interface to monitor the fraud detection system:
+
 - **Transaction Display**: It shows real-time transaction data along with the fraud status (fraudulent or legitimate).
 - **Color Coding**: Fraudulent transactions are highlighted in red, and legitimate transactions are displayed in green.
 - **Dynamic Updates**: Fetches data periodically from the back-end to update the dashboard in real-time.
@@ -102,12 +107,14 @@ The JavaScript dashboard provides a user interface to monitor the fraud detectio
 ### 5. **Bash: Automating Deployment**
 
 The Bash script automates the deployment process of the **Python fraud detection model** using **Docker**:
+
 - **Dockerization**: The Python model is packaged into a Docker container, ensuring consistency across environments.
 - **Deployment**: The script runs the Docker container on a server, making the fraud detection service accessible at a specified endpoint.
 
 ### 6. **YAML: CI/CD Pipeline**
 
 The CI/CD workflow uses GitHub Actions to:
+
 - Run automated tests for Python code.
 - Build and push Docker images to a container registry.
 - Deploy the application to a production or staging environment.
@@ -117,6 +124,7 @@ The CI/CD workflow uses GitHub Actions to:
 ## 🚀 Deployment
 
 To deploy the platform, follow these steps:
+
 1. Run the Bash script to build and deploy the Docker container.
 2. Ensure your GitHub repository is linked to the CI/CD pipeline for continuous integration and deployment.
 
@@ -126,7 +134,7 @@ To deploy the platform, follow these steps:
 
 - **Machine Learning Model**: The **Random Forest Classifier** performs well with an optimized **ROC AUC score** for distinguishing fraudulent transactions. Further enhancements can be made using more advanced models like **Neural Networks** or **XGBoost**.
 - **Real-Time Detection**: The **Java-based service** provides an efficient, rule-based detection mechanism for quick identification of fraud in real-time transactions.
-  
+
 For better performance, the model can be further tuned with techniques like **hyperparameter optimization**, **feature engineering**, or integrating **deep learning models**.
 
 ---
@@ -140,4 +148,3 @@ We welcome contributions! Here's how you can contribute:
 3. Commit your changes (`git commit -am 'Add new feature'`).
 4. Push to your branch (`git push origin feature-name`).
 5. Create a pull request.
-
