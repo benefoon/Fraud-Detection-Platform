@@ -1,7 +1,4 @@
-در اینجا نسخه به‌روز شده و جامع از فایل `README.md` پروژه شما آورده شده است:
-
-```markdown
-# Fraud Detection Platform: Advanced Multi-Language Extension
+## Fraud Detection Platform: Advanced Multi-Language Extension
 
 ## 📋 Overview
 
@@ -171,5 +168,3 @@ We welcome contributions! Here's how you can contribute:
 3. Commit your changes (`git commit -am 'Add new feature'`).
 4. Push to your branch (`git push origin feature-name`).
 5. Create a pull request.
-
-```
