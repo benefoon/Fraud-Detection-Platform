@@ -1,0 +1,4 @@
+transaction_id,customer_id,amount,is_fraud
+1,1001,1500,1
+2,1002,200,0
+3,1003,5000,1
