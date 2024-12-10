@@ -9,6 +9,8 @@ Key components include:
 - **Java** for real-time fraud detection services.
 - **JavaScript** for building an interactive fraud monitoring dashboard.
 - **Bash** for automating deployment through Docker.
+- **YAML** for configuring CI/CD pipelines.
+- **Docker** for containerization and deployment.
 
 ---
 
@@ -19,6 +21,8 @@ Key components include:
 - **Java**: For real-time fraud detection in financial transactions.
 - **JavaScript**: For creating an interactive dashboard to monitor fraud alerts.
 - **Bash**: For automating the deployment of the fraud detection model in a Docker container.
+- **YAML**: For defining CI/CD workflows in GitHub Actions.
+- **Docker**: For packaging the Python application and dependencies into a container.
 
 ---
 
@@ -59,6 +63,10 @@ Open `index.html` in your browser to see real-time fraud monitoring.
 
 Use the provided Bash script to build and deploy the Python fraud detection model in Docker.
 
+### 7. Configure CI/CD Workflow
+
+Ensure your GitHub repository contains the `ci-cd.yml` workflow file under `.github/workflows/`. This automates testing and deployment.
+
 ---
 
 ## 🔍 How It Works
@@ -70,6 +78,7 @@ The Python component implements a **Random Forest Classifier** model that detect
 - **Balancing the Dataset**: Using **SMOTE** (Synthetic Minority Over-sampling Technique) to handle imbalanced data.
 - **Model Training**: A **Random Forest Classifier** is trained on the preprocessed and balanced data.
 - **Model Evaluation**: The model is evaluated using metrics such as **Precision**, **Recall**, and **ROC AUC** to assess its performance in distinguishing fraudulent transactions.
+- **Hyperparameter Tuning**: Grid Search is used to optimize model parameters for better accuracy.
 
 ### 2. **SQL: Data Aggregation and Indexing**
 
@@ -88,6 +97,7 @@ The Java service performs **real-time fraud detection** based on predefined rule
 The JavaScript dashboard provides a user interface to monitor the fraud detection system:
 - **Transaction Display**: It shows real-time transaction data along with the fraud status (fraudulent or legitimate).
 - **Color Coding**: Fraudulent transactions are highlighted in red, and legitimate transactions are displayed in green.
+- **Dynamic Updates**: Fetches data periodically from the back-end to update the dashboard in real-time.
 
 ### 5. **Bash: Automating Deployment**
 
@@ -95,11 +105,20 @@ The Bash script automates the deployment process of the **Python fraud detection
 - **Dockerization**: The Python model is packaged into a Docker container, ensuring consistency across environments.
 - **Deployment**: The script runs the Docker container on a server, making the fraud detection service accessible at a specified endpoint.
 
+### 6. **YAML: CI/CD Pipeline**
+
+The CI/CD workflow uses GitHub Actions to:
+- Run automated tests for Python code.
+- Build and push Docker images to a container registry.
+- Deploy the application to a production or staging environment.
+
 ---
 
 ## 🚀 Deployment
 
-To deploy the platform, follow the Docker steps to create an isolated environment for running the fraud detection model. The deployment ensures that the model is portable and scalable across different environments.
+To deploy the platform, follow these steps:
+1. Run the Bash script to build and deploy the Docker container.
+2. Ensure your GitHub repository is linked to the CI/CD pipeline for continuous integration and deployment.
 
 ---
 
@@ -121,3 +140,4 @@ We welcome contributions! Here's how you can contribute:
 3. Commit your changes (`git commit -am 'Add new feature'`).
 4. Push to your branch (`git push origin feature-name`).
 5. Create a pull request.
+
