@@ -1,15 +1,17 @@
-# Use an official Python runtime as the base image
+# Use Python image
 FROM python:3.9-slim
+
+# Set environment variables for security
+ENV PYTHONUNBUFFERED 1
+
+# Install necessary dependencies
+RUN pip install --no-cache-dir -r /app/requirements.txt
+
+# Copy the project files into the container
+COPY . /app
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the application code
-COPY src/python/ml_pipeline.py .
-
-# Run the application
-CMD ["python", "ml_pipeline.py"]
+# Command to run the application
+CMD ["python", "src/python/ml_pipeline.py"]
