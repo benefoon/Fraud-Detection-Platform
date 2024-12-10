@@ -1,24 +1,26 @@
 import java.util.*;
 
 public class FraudDetectionService {
-    public static void main(String[] args) {
-        // Example transaction
-        Map<String, Object> transaction = new HashMap<>();
-        transaction.put("customerId", 12345);
-        transaction.put("amount", 5000);
-        transaction.put("location", "New York");
-        transaction.put("time", "2024-12-10T10:15:30");
 
-        // Simulate fraud detection
-        boolean isFraud = detectFraud(transaction);
-        System.out.println("Transaction Fraudulent: " + isFraud);
+    // Example fraud detection rules with basic thresholds
+    public static String detectFraud(double transactionAmount, String location) {
+        // Rule-based detection (basic example)
+        if (transactionAmount > 10000) {
+            return "Fraudulent: Transaction amount too high";
+        }
+        if (location.equals("Suspicious Country")) {
+            return "Fraudulent: Suspicious location";
+        }
+        return "Legitimate";
     }
 
-    public static boolean detectFraud(Map<String, Object> transaction) {
-        double amount = (double) transaction.get("amount");
-        String location = (String) transaction.get("location");
+    public static void main(String[] args) {
+        // Sample transaction data
+        double transactionAmount = 12000;
+        String location = "Suspicious Country";
 
-        // Simple rule-based fraud detection
-        return amount > 1000 && "New York".equals(location);
+        // Detect fraud
+        String fraudStatus = detectFraud(transactionAmount, location);
+        System.out.println("Transaction Status: " + fraudStatus);
     }
 }
