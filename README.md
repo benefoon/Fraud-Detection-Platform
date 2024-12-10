@@ -1,11 +1,8 @@
----
-
-# Fraud Detection Platform: Advanced Multi-Language Extension
+Fraud Detection Platform: Advanced Multi-Language Extension
 
 ## 📋 Overview
 
 The **Fraud Detection Platform** is a robust and scalable system designed to detect fraudulent transactions in real-time. This platform integrates multiple programming languages and advanced machine learning techniques to ensure high accuracy and quick responses to potential fraud.
-
 Key components include:
 - **Python** for machine learning and data preprocessing.
 - **SQL** for aggregating and preparing transaction data.
