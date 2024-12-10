@@ -1,4 +1,8 @@
-pandas
-numpy
-scikit-learn
-imbalanced-learn
+cryptography==39.0.1
+pyjwt==2.6.0
+xgboost==1.7.5
+fastapi==0.95.1
+uvicorn==0.22.0
+smtplib==0.1
+requests==2.28.1
+pytest==7.4.0
