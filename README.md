@@ -1,4 +1,4 @@
-Fraud Detection Platform: Advanced Multi-Language Extension
+## Fraud Detection Platform: Advanced Multi-Language Extension
 
 ## 📋 Overview
 
