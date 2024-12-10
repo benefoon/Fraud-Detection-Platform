@@ -1,12 +1,15 @@
--- Aggregate transaction data
-SELECT 
-    customer_id, 
-    COUNT(transaction_id) AS total_transactions, 
-    SUM(CASE WHEN is_fraud = 1 THEN 1 ELSE 0 END) AS fraud_count, 
-    AVG(amount) AS avg_transaction_amount, 
-    MAX(amount) AS max_transaction_amount
-FROM transactions
-GROUP BY customer_id;
+-- setup_database.sql
 
--- Create indices for faster queries
-CREATE INDEX idx_customer_id ON transactions (customer_id);
+-- Creating a table to store transaction data securely
+CREATE TABLE transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT NOT NULL,
+    transaction_amount DECIMAL(10, 2) NOT NULL,
+    transaction_time DATETIME NOT NULL,
+    fraud_status VARCHAR(20) NOT NULL,
+    encrypted_card_number BLOB -- Store encrypted card number
+);
+
+-- Insert example encrypted transaction data (encrypted card number)
+INSERT INTO transactions (customer_id, transaction_amount, transaction_time, fraud_status, encrypted_card_number)
+VALUES (123, 12000, NOW(), 'Fraudulent', 'gAAAAABlY0V8oU4L9GvM4h6Ae6xOBZ9Xf4zF0dTZ-xlBw9h7Kmfg6FgD6Eos5a7hvfFSRA==');
