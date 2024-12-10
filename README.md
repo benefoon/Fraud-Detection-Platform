@@ -1,11 +1,15 @@
-## Fraud Detection Platform: Advanced Multi-Language Extension
+در اینجا نسخه به‌روز شده و جامع از فایل `README.md` پروژه شما آورده شده است:
+
+```markdown
+# Fraud Detection Platform: Advanced Multi-Language Extension
 
 ## 📋 Overview
 
 The **Fraud Detection Platform** is a robust and scalable system designed to detect fraudulent transactions in real-time. This platform integrates multiple programming languages and advanced machine learning techniques to ensure high accuracy and quick responses to potential fraud.
+
 Key components include:
 
-- **Python** for machine learning and data preprocessing.
+- **Python** for machine learning, data preprocessing, encryption, and notification handling.
 - **SQL** for aggregating and preparing transaction data.
 - **Java** for real-time fraud detection services.
 - **JavaScript** for building an interactive fraud monitoring dashboard.
@@ -17,7 +21,7 @@ Key components include:
 
 ## 🛠️ Tech Stack
 
-- **Python**: For training machine learning models and performing data preprocessing.
+- **Python**: For training machine learning models, performing data preprocessing, encryption, and handling notifications.
 - **SQL**: For database aggregation and preparing transactional data.
 - **Java**: For real-time fraud detection in financial transactions.
 - **JavaScript**: For creating an interactive dashboard to monitor fraud alerts.
@@ -50,19 +54,38 @@ pip install -r requirements.txt
 
 ### 3. Set Up SQL Database
 
-Execute the provided SQL script to aggregate transaction data and create indices.
+Execute the provided SQL script to aggregate transaction data and create indices:
+
+```bash
+mysql -u your_username -p < sql/setup_database.sql
+```
 
 ### 4. Java Real-Time Fraud Detection Service
 
 Compile and run the Java service to perform rule-based fraud detection.
 
+```bash
+cd src/java
+javac FraudDetectionService.java
+java FraudDetectionService
+```
+
 ### 5. JavaScript Dashboard
 
 Open `index.html` in your browser to see real-time fraud monitoring.
 
+```bash
+open src/javascript/index.html  # On MacOS
+start src/javascript/index.html # On Windows
+```
+
 ### 6. Dockerize and Deploy the Python Model
 
-Use the provided Bash script to build and deploy the Python fraud detection model in Docker.
+Use the provided Bash script to build and deploy the Python fraud detection model in Docker:
+
+```bash
+./scripts/deploy_model.sh
+```
 
 ### 7. Configure CI/CD Workflow
 
@@ -148,3 +171,5 @@ We welcome contributions! Here's how you can contribute:
 3. Commit your changes (`git commit -am 'Add new feature'`).
 4. Push to your branch (`git push origin feature-name`).
 5. Create a pull request.
+
+```
