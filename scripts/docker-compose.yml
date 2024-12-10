@@ -1,0 +1,6 @@
+version: '3.8'
+services:
+  fraud-detection:
+    build: .
+    ports:
+      - "5000:5000"
