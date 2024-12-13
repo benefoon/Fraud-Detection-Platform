@@ -168,3 +168,44 @@ We welcome contributions! Here's how you can contribute:
 3. Commit your changes (`git commit -am 'Add new feature'`).
 4. Push to your branch (`git push origin feature-name`).
 5. Create a pull request.
+
+
+---
+
+### **🔒 Advanced Security Enhancements**  
+The platform now includes robust security mechanisms to ensure data integrity and protection:  
+
+- **Encryption**: Implemented **AES-256** for encrypting sensitive data such as transaction details.
+- **Key Management**: Integrated **AWS KMS** for secure storage and management of encryption keys.
+- **Access Control**: Role-Based Access Control (RBAC) ensures fine-grained access to the platform features.
+- **Incident Monitoring**: Security logs are actively monitored for anomalies, triggering alerts when unusual activity is detected.
+
+---
+
+### **📡 Enhanced Deployment and Monitoring**  
+
+- **Log Monitoring**: Added scripts to detect anomalies in real-time logs and flag potential security breaches.
+- **Dockerized Deployment**: Optimized Docker images for smaller size and faster deployment.
+- **CI/CD Pipeline**: Improved workflows for automated testing, security checks, and deployment.  
+
+---
+
+### **📊 Performance Improvements**  
+
+- **Model Optimization**: Integrated **XGBoost** alongside Random Forest for higher accuracy and faster fraud detection.
+- **Database Indexing**: Improved query performance by adding composite indexes to frequently accessed tables.  
+
+---
+
+### **📈 Visualization Enhancements**  
+
+- **Dashboard Features**: Added filtering by transaction types, time range, and fraud status in the real-time JavaScript dashboard.
+- **Heatmaps**: Included geographical heatmaps to visualize fraud clusters.
+
+---
+
+### **🚀 Future Roadmap**  
+
+- **Multi-Language API**: Plan to support additional languages like Go and Rust for specific services.
+- **Deep Learning Integration**: Testing advanced neural network models for fraud detection.
+- **Kubernetes**: Transitioning deployment architecture to Kubernetes for scalability.
